@@ -15,7 +15,8 @@ let WidgetOLOO = {
 };
 
 let ButtonOLOO = {
-    setup : function (width, height, label) {
+    setup : function(width, height, label) {
+        console.log("********", this); // NOTE: if => function is used here then this refers to body because of lexical scope
         this.init(width, height);
         this.label = label;
         this.$elem = $("<button>").text(this.label);
